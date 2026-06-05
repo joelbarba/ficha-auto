@@ -20,5 +20,6 @@ jobs:
 
       - name: Ejecutar el script de fichaje
         env:
-          REFRESH_TOKEN: ${{ secrets.REFRESH_TOKEN }}
+          USER: ${{ secrets.USER }}
+          PASS: ${{ secrets.PASS }}
         run: node fichawork.js
