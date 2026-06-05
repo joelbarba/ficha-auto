@@ -19,7 +19,7 @@ Segueix aquests passos per tenir el teu propi sistema de fitxatge en menys de 5 
 2. Fes un **Fork** d'aquest repositori (botó a la part superior dreta).
 3. Deixa les opcions per defecte i fes clic a **Create fork**. Ara ja tens una còpia privada al teu compte.
 
-### Pas 2: Configurar el Secret a GitHub
+### Pas 2: Configurar el teu usuari de fichawork a GitHub
 1. Al **teu** repositori (el fork), ves a la pestanya **Settings**.
 2. Al menú esquerre, ves a **Secrets and variables** → **Actions**.
 3. Fes clic a **New repository secret**.
