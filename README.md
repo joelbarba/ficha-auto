@@ -19,30 +19,24 @@ Segueix aquests passos per tenir el teu propi sistema de fitxatge en menys de 5 
 2. Fes un **Fork** d'aquest repositori (botó a la part superior dreta).
 3. Deixa les opcions per defecte i fes clic a **Create fork**. Ara ja tens una còpia privada al teu compte.
 
-### Pas 2: Obtenir el teu Refresh Token
-1. Obre [app.ficha.work](https://app.ficha.work) i inicia sessió.
-2. Prem **F12** per obrir les eines de desenvolupador.
-3. Ves a la pestanya **Application** (Chrome/Edge) o **Storage** (Firefox).
-4. Al panell esquerre, desplega **Local Storage** i selecciona `https://app.ficha.work`.
-5. Busca la clau anomenada `refreshToken` i copia'n el valor (un text molt llarg).
-
-> [!CAUTION]
-> Aquest token és com la teva contrasenya. **No el comparteixis**. Guarda'l només als secrets de GitHub perquè es mantingui ocult.
-
-### Pas 3: Configurar el Secret a GitHub
+### Pas 2: Configurar el Secret a GitHub
 1. Al **teu** repositori (el fork), ves a la pestanya **Settings**.
 2. Al menú esquerre, ves a **Secrets and variables** → **Actions**.
 3. Fes clic a **New repository secret**.
-4. **Name:** `REFRESH_TOKEN`
-5. **Secret:** Enganxa el valor que has copiat al pas anterior.
+4. **Name:** `USER`
+5. **Secret:** Introdueix el teu usuari.
 6. Fes clic a **Add secret**.
+7. Fes clic a **New repository secret**.
+8. **Name:** `PASS`
+9. **Secret:** Introdueix el teu password.
+10. Fes clic a **Add secret**.
 
-### Pas 4: Activar els Workflows
+### Pas 3: Activar els Workflows
 GitHub desactiva les accions per defecte quan fas un fork. Per activar-les:
 1. Ves a la pestanya **Actions** del teu repositori.
 2. Fes clic al botó verd: **"I understand my workflows, go ahead and enable them"**.
 
-### Pas 5: Prova de funcionament
+### Pas 4: Prova de funcionament
 1. Dins de la pestanya **Actions**, selecciona el flux **Fichaje automático** a la llista de l'esquerra.
 2. Fes clic al desplegable **Run workflow** → botó **Run workflow**.
 3. Espera uns segons, recarrega la pàgina i fes clic a l'execució per veure els logs i confirmar que ha funcionat correctament.
