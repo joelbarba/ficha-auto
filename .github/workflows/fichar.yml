@@ -2,8 +2,20 @@ name: Fichaje automatico Ficha.Work
 
 on:
   schedule:
-    - cron: '0 2 * * 1-5'   # 08:00 UTC -> 09:00 hora Madrid (con UTC+1) / 10:00 (con UTC+2)
-    - cron: '0 12 * * 1-5'  # 16:00 UTC -> 17:00 hora Madrid (con UTC+1) / 18:00 (con UTC+2)
+    # - cron: '0 2 * * 1-5'   # 08:00 UTC -> 09:00 hora Madrid (con UTC+1) / 10:00 (con UTC+2)
+    # - cron: '0 12 * * 1-5'  # 16:00 UTC -> 17:00 hora Madrid (con UTC+1) / 18:00 (con UTC+2)
+
+    # Mondays (1), Tuesdays (2), and Thursdays (4) at 9:00 AM
+    - cron: '0 9 * * 1,2,4'
+
+    # Mondays (1) and Thursdays (4) at 2:00 PM (14:00)
+    - cron: '0 14 * * 1,4'
+
+    # Wednesdays (3) and Fridays (5) at 1:30 PM (13:30)
+    - cron: '30 13 * * 3,5'
+
+    # Tuesdays (2), Wednesdays (3), and Fridays (5) at 5:00 PM (17:00)
+    - cron: '0 17 * * 2,3,5'    
   workflow_dispatch:
 
 jobs:
